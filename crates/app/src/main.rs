@@ -1,13 +1,16 @@
 mod grid;
+mod camera;
 
 use bevy::prelude::*;
 use grid::GridPlugin;
+use camera::CameraPlugin;
 
 
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
         .add_plugins(GridPlugin)
+        .add_plugins(CameraPlugin)
         .add_systems(Startup, setup)
         .run();
 }
